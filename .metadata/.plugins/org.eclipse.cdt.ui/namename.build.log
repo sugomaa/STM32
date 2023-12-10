@@ -1,0 +1,17 @@
+14:00:12 **** Incremental Build of configuration Debug for project namename ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "namename.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\green\STM32CubeIDE\workspace_1.13.1\namename\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="namename.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: namename.elf
+ 
+arm-none-eabi-size   namename.elf 
+arm-none-eabi-objdump -h -S  namename.elf  > "namename.list"
+   text	   data	    bss	    dec	    hex	filename
+   1672	     12	   1572	   3256	    cb8	namename.elf
+Finished building: default.size.stdout
+ 
+Finished building: namename.list
+ 
+
+14:00:14 Build Finished. 0 errors, 0 warnings. (took 1s.188ms)
+
